@@ -1,0 +1,388 @@
+$theme-colors: (
+    "primary": #127dba,
+    "secondary": #404055,
+    "success": #13a95d,
+    "danger": #ff460b,
+    "info": #709fc9,
+    "warning": #ff910b,
+    "light": #353548,
+    "dark": #262636
+);
+
+$primary: #127dba;
+$success: #13a95d;
+$body-bg: #09091a;
+$body-color: #ffffff;
+$navbar-light-active-color: #3e454c; //не переопределен
+$light: #353548;
+$dark: #262636;
+$input-color: #ffffff;
+$table-bg: #262636;
+$table-hover-bg: #353548;
+$nav-pills-link-active-bg: #127dba;
+$nav-pils-border-radius: 0.25rem;
+$breadcrumb-bg: none;
+$box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+$h6-font-size: 0.875rem;
+$link-hover-color: #262636;
+$link-color: #ffffff;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./node_modules/bootstrap/scss/functions";
+
+.bs-docs-section {
+    margin-bottom: 2rem;
+}
+
+.well,
+.card-body {
+    background-color: $dark;
+}
+
+.card-header,
+.form-control {
+    background-color: $light;
+}
+
+.main-form {
+    width: 450px;
+    margin: auto;
+}
+
+.form-control {
+    border: 1px solid $light;
+    color: $input-color;
+}
+
+.input-lg {
+    height: $input-height-lg;
+}
+
+.input-sm {
+    height: $input-height-sm;
+}
+
+.nav-pills > li.active > a {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+}
+
+.nav-pills > li > a {
+    border-radius: $nav-pils-border-radius;
+}
+
+.breadcrumb a,
+.breadcrumb .active,
+.disabled a,
+th,
+.fas,
+.fa-bell,
+.fa-envelope,
+.modal-header .modal-title {
+    background-color: $breadcrumb-bg;
+    color: $body-color;
+}
+
+.modal-header {
+    background-color: $light;
+    color: $body-color;
+    border-bottom: 1px solid $light;
+    box-shadow: $box-shadow;
+}
+
+.accordion,
+table,
+.card-body,
+.form-control,
+.modal-content {
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
+
+.btn-warning,
+.btn-warning.disabled,
+.badge-warning {
+    color: $white;
+}
+
+.page-header {
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.dropdown-menu {
+    background: $light;
+}
+
+.dropdown-menu > .dropdown-item:hover,
+.dropdown-menu > li > .dropdown-item:hover {
+    background: rgb(66, 66, 87) linear-gradient(rgb(66, 66, 87), rgb(66, 66, 87));
+}
+
+.navbar-dark {
+    box-shadow: $box-shadow;
+}
+
+.form-control:focus {
+    background-color: $light;
+    border: 1px solid #4d4d58;
+    box-shadow: inset 0px 0px 1px 0px #697179;
+    caret-color: $body-color;
+}
+
+.form-control.is-invalid:focus,
+.form-control.is-valid:focus {
+    box-shadow: inset 0px 0px 1px 0px #697179;
+}
+
+.form-control.is-invalid,
+.form-control.is-valid,
+.form-control.is-invalid:focus,
+.form-control.is-valid:focus {
+    background-image: none;
+}
+
+.btn-secondary:hover {
+    background-color: #656870;
+}
+
+.btn:focus,
+.btn:active,
+.close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.close,
+.close:hover {
+    color: $link-color;
+}
+
+.rounded {
+    overflow: hidden;
+}
+
+.table td,
+.table thead th {
+    padding-left: 1.5rem;
+    border: none;
+}
+
+.table tbody tr:hover {
+    background-color: $table-hover-bg;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25), 0px -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background: $light;
+    border: 1px solid $dark;
+    box-shadow: $box-shadow;
+}
+
+tbody {
+    background: $dark;
+}
+
+.well {
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.control-label {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #cfcfdf;
+    background-color: $light;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+}
+
+option:checked,
+option:hover {
+    background: rgb(66, 66, 87) linear-gradient(rgb(66, 66, 87), rgb(66, 66, 87));
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    cursor: pointer;
+}
+
+.nav-tabs .nav-link.active {
+    color: $body-color;
+    border-color: transparent;
+    border-bottom: solid 0.25rem $primary;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.fas {
+    vertical-align: -0.1rem;
+    margin-left: 0.5rem;
+}
+
+.badge {
+    padding: 0.5rem 0.7rem;
+    font-weight: normal;
+    line-height: 1;
+    border-radius: 1rem;
+}
+
+.fa-bell,
+.fa-envelope {
+    font-size: 1.5rem;
+}
+
+.fa-bell + .badge-danger,
+.fa-envelope + .badge-danger {
+    position: relative;
+    top: -12px;
+    left: -14px;
+    border-radius: 56px;
+    padding: 0.3rem 0.5rem;
+}
+
+.btn-info .badge-light,
+.list-group-item .badge {
+    border-radius: 50px;
+    padding: 0.3rem 0.5rem;
+}
+
+.progress {
+    margin-bottom: 1rem;
+    margin-left: 0.3rem;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1rem 0 1rem;
+    background-color: $dark;
+}
+
+.list-group-item:hover {
+    background-color: $dark;
+}
+
+.list-group-item:last-child {
+    padding-bottom: 1rem;
+}
+
+.active.new-item {
+    border-left: solid 0.25rem $success;
+    padding: 0.3rem 0 0.3rem 0.5rem;
+}
+
+.last-item {
+    padding-left: 1rem;
+}
+
+.card-body {
+    padding: 1.25rem 2rem;
+}
+
+.card-body .card-title {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.modal-title {
+    font-weight: 400;
+}
+
+.modal-content {
+    border: none;
+}
+
+.modal-body {
+    background-color: $dark;
+    padding-bottom: 0;
+}
+
+.modal-footer {
+    border-top: none;
+    background-color: $dark;
+}
+
+.popover {
+    border: none;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15), -4px -4px 8px rgba(0, 0, 0, 0.15);
+    max-width: 0.5rem 0.25rem;
+}
+
+.popover-body {
+    border: none;
+    padding: 1rem;
+    color: #3e454c;
+    z-index: 2;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: $primary;
+    width: 20rem;
+    height: 100%;
+}
+
+.menu .list-group-item {
+    width: 100%;
+    color: #bbcedf;
+    background: $primary;
+    border: none;
+    padding: 1rem;
+}
+
+.list-group-item span {
+    padding-left: 1rem;
+}
+
+.menu .list-group-item:hover {
+    display: flex;
+    width: 100%;
+    background: $dark;
+    cursor: pointer;
+    margin: 0;
+    color: white;
+    border-radius: 0;
+}
+
+.menu .list-group-item .fas {
+    color: #bbcedf;
+    margin-left: 1.5rem;
+    vertical-align: inherit;
+}
+
+.menu .list-group-item:hover .fas {
+    color: white;
+    vertical-align: initial;
+    line-height: 24px;
+}
+
+.page-link {
+    background: $light;
+}
+
+.pagination .page-link {
+    color: $link-color;
+}
+
+.pagination .page-link:hover {
+    color: $link-hover-color;
+}
+
+.accordion .btn-link {
+    color: $link-color;
+}
