@@ -7591,6 +7591,14 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+.btn:focus,
+.btn:active,
+.close:focus,
+.close:active {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: !important; }
+
 .bs-docs-section {
   margin-bottom: 2rem; }
 
@@ -7824,7 +7832,8 @@ option:hover {
 
 .popover {
   border: none;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15), -4px -4px 8px rgba(0, 0, 0, 0.15); }
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15), -4px -4px 8px rgba(0, 0, 0, 0.15);
+  max-width: 0.5rem 0.25rem; }
 
 .popover-body {
   border: none;
@@ -7879,6 +7888,24 @@ option:hover {
   color: #262636; }
 
 .accordion .btn-link {
+  color: #ffffff; }
+
+input {
+  outline: none; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #353548 !important;
+  -webkit-text-fill-color: #ffffff; }
+
+.page-link {
+  border: 1px solid #353548; }
+
+.page-link:hover {
+  cursor: pointer;
+  background-color: #09091a;
+  border: 1px solid #353548; }
+
+.page-item:hover {
   color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */

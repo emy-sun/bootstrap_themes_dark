@@ -26,9 +26,19 @@ $box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 $h6-font-size: 0.875rem;
 $link-hover-color: #262636;
 $link-color: #ffffff;
+$border: 1px solid $light;
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
 @import "./node_modules/bootstrap/scss/functions";
+
+.btn:focus,
+.btn:active,
+.close:focus,
+.close:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: !important;
+}
 
 .bs-docs-section {
     margin-bottom: 2rem;
@@ -385,4 +395,26 @@ option:hover {
 
 .accordion .btn-link {
     color: $link-color;
+}
+
+input {
+    outline: none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #353548 !important;
+    -webkit-text-fill-color: $body-color;
+}
+
+.page-link {
+    border: $border;
+}
+
+.page-link:hover {
+    cursor: pointer;
+    background-color: $body-bg;
+    border: $border;
+}
+
+.page-item:hover {
+    color: $body-color;
 }
