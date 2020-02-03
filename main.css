@@ -7908,4 +7908,12 @@ input:-webkit-autofill {
 .page-item:hover {
   color: #ffffff; }
 
+select option:hover,
+select option:focus,
+select option:active,
+select option:checked {
+  color: white !important;
+  background: linear-gradient(#262636, #262636);
+  -webkit-text-fill-color: #fff; }
+
 /*# sourceMappingURL=main.css.map */

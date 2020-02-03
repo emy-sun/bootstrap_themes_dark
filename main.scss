@@ -418,3 +418,12 @@ input:-webkit-autofill {
 .page-item:hover {
     color: $body-color;
 }
+
+select option:hover,
+select option:focus,
+select option:active,
+select option:checked {
+    color: white !important;
+    background: linear-gradient($dark, $dark);
+    -webkit-text-fill-color: $white;
+}
